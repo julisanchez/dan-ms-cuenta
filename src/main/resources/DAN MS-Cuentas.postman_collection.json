@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "015f5cde-8b30-49cd-8770-3944b3bc0ae1",
+		"name": "DAN MS-Cuentas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Pago",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"medio\": {\n        \"observacion\": \"pago\",\n        \"nroRecibo\": 3\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/api/cuenta/{{idCliente}}/pago",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"api",
+						"cuenta",
+						"{{idCliente}}",
+						"pago"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pagos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"medio\": {\n        \"observacion\": \"pago\",\n        \"nroRecibo\": 3\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/api/cuenta/{{idCliente}}/pago",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"api",
+						"cuenta",
+						"{{idCliente}}",
+						"pago"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "idCliente",
+			"value": "1"
+		}
+	]
+}
